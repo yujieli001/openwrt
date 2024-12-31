@@ -1,4 +1,4 @@
-src-git packages https://github.com/yujieli001/packages.git;openwrt-23.05
-src-git luci https://github.com/yujieli001/luci.git;openwrt-23.05
-src-git routing https://github.com/yujieli001/routing.git;openwrt-23.05
-src-git telephony https://github.com/yujieli001/telephony.git;openwrt-23.05
+src-git packages https://gitee.com/www/packages.git;openwrt-23.05
+src-git luci https://gitee.com/www/luci.git;openwrt-23.05
+src-git routing https://gitee.com/www/routing.git;openwrt-23.05
+src-git telephony https://gitee.com/www/telephony.git;openwrt-23.05
