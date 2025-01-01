@@ -1,5 +1,50 @@
 #!/bin/sh
+uci set system.@system[0].hostname='lihome'
+uci commit system
+#
+# wlan_name="lihome"
+# wlan_password="password"
+#
+root_password="password"
+lan_ip_address="10.28.73.40"
+lan_gateway_ip="10.28.73.254"
+dns_server="223.5.5.5 8.8.8.8"
+#
+# pppoe_username=""
+# pppoe_password=""
 
+# log potential errors
+exec >/tmp/setup.log 2>&1
+
+if [ -n "$root_password" ]; then
+  (echo "$root_password"; sleep 1; echo "$root_password") | passwd > /dev/null
+fi
+
+# Configure LAN
+# More options: https://openwrt.org/docs/guide-user/base-system/basic-networking
+if [ -n "$lan_ip_address" ]; then
+  uci set network.lan.ipaddr="$lan_ip_address"
+  uci commit network
+fi
+if [ -n "$lan_gateway_ip" ]; then
+  uci set network.lan.gateway="$lan_gateway_ip"
+  uci commit network
+fi
+if [ -n "$dns_server" ]; then
+  uci set network.lan.dns="$dns_server"
+  uci commit network
+fi
+
+# Configure PPPoE
+#protocol_pppoe_ppp_over_ethernet
+if [ -n "$pppoe_username" -a "$pppoe_password" ]; then
+  uci set network.wan.proto=pppoe
+  uci set network.wan.username="$pppoe_username"
+  uci set network.wan.password="$pppoe_password"
+  uci commit network
+fi
+
+# ----------------------------------------------------------------
 uci -q batch <<-EOF
 	set system.@system[0].timezone='CST-8'
 	set system.@system[0].zonename='Asia/Shanghai'
@@ -37,7 +82,7 @@ sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999
 sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 
 sed -i "s/# //g" /etc/opkg/distfeeds.conf
-sed -i '/openwrt_luci/ { s/snapshots/releases\/18.06.9/g; }'  /etc/opkg/distfeeds.conf
+#sed -i '/openwrt_luci/ { s/snapshots/releases\/18.06.9/g; }'  /etc/opkg/distfeeds.conf
 
 sed -i '/check_signature/d' /etc/opkg.conf
 
@@ -47,9 +92,9 @@ sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
 
 sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
-echo "DISTRIB_REVISION='R24.12.12'" >> /etc/openwrt_release
+echo "DISTRIB_REVISION='v23.05.5'" >> /etc/openwrt_release
 sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
-echo "DISTRIB_DESCRIPTION='LEDE '" >> /etc/openwrt_release
+echo "DISTRIB_DESCRIPTION='liwrt '" >> /etc/openwrt_release
 
 sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
