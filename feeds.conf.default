@@ -2,4 +2,3 @@ src-git packages https://gitee.com/wwwos/packages.git
 src-git luci https://gitee.com/wwwos/luci.git
 src-git routing https://gitee.com/wwwos/routing.git
 src-git telephony https://gitee.com/wwwos/telephony.git
-src-git luci-theme-argon https://github.com/jerrykuku/luci-theme-argon.git
