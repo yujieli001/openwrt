@@ -39,6 +39,8 @@ define Package/ddns-scripts_aliyun/preinst
 endef
 
 define Package/ddns-scripts_aliyun/install
+	$(INSTALL_DIR) $(1)/etc/ddns/services
+	$(INSTALL_DIR) $(1)/etc/ddns/services_ipv6
 	$(INSTALL_DIR) $(1)/usr/lib/ddns $(1)/usr/share/ddns/default
 	$(INSTALL_BIN) $(CURDIR)/update_aliyun_com.sh $(1)/usr/lib/ddns
 	$(INSTALL_DATA) $(CURDIR)/aliyun.com.json $(1)/usr/share/ddns/default
