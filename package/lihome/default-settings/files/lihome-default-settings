@@ -10,8 +10,8 @@ lan_ip_address="192.168.1.254"
 lan_gateway_ip=""
 dns_server="223.5.5.5 8.8.8.8"
 #
-# pppoe_username=""
-# pppoe_password=""
+pppoe_username="nbdl03966126"
+pppoe_password="zj120015"
 
 # log potential errors
 exec >/tmp/setup.log 2>&1
