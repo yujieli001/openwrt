@@ -58,11 +58,10 @@
 			linux,code = <KEY_RESTART>;
 		};
 
-		rfkill {
-			label = "WiFi on/off switch";
+		switch {
+			label = "switch-button";
 			gpios = <&tlmm 0 GPIO_ACTIVE_LOW>;
-			linux,code = <KEY_RFKILL>;
-			linux,input-type = <EV_SW>;
+			linux,code = <KEY_SETUP>;
 		};
 	};
 

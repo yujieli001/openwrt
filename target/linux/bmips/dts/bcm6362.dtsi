@@ -319,7 +319,7 @@
 
 				pinctrl_nand: nand-pins {
 					function = "nand";
-					pins = "nand_grp";
+					group = "nand_grp";
 				};
 			};
 		};
