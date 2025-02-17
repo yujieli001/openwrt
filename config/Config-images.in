@@ -89,7 +89,8 @@ menu "Target Images"
 
 	menuconfig TARGET_ROOTFS_EXT4FS
 		bool "ext4"
-		default y if USES_EXT4
+		#default y if USES_EXT4
+		default 0
 		help
 		  Build an ext4 root filesystem.
 
@@ -201,7 +202,7 @@ menu "Target Images"
 		depends on TARGET_ROOTFS_EXT4FS || TARGET_ROOTFS_JFFS2 || TARGET_ROOTFS_SQUASHFS
 		select PACKAGE_grub2
 		select PACKAGE_grub2-bios-setup
-		default y
+		default 0
 
 	config GRUB_EFI_IMAGES
 		bool "Build GRUB EFI images (Linux x86 or x86_64 host only)"
@@ -243,7 +244,7 @@ menu "Target Images"
 	config GRUB_TIMEOUT
 		string "Seconds to wait before booting the default entry"
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
-		default "5"
+		default "0"
 		help
 		  If you don't know, 5 seconds is a reasonable default.
 
@@ -281,7 +282,7 @@ menu "Target Images"
 	config TARGET_IMAGES_GZIP
 		bool "GZip images"
 		depends on TARGET_ROOTFS_EXT4FS || TARGET_x86 || TARGET_armsr || TARGET_malta
-		default y
+		default 0
 
 	comment "Image Options"
 
@@ -299,6 +300,7 @@ menu "Target Images"
 	config TARGET_ROOTFS_PARTSIZE
 		int "Root filesystem partition size (in MiB)"
 		depends on USES_ROOTFS_PART || TARGET_ROOTFS_EXT4FS
+		default 512 if TARGET_x86
 		default 104
 		help
 		  Select the root filesystem partition size.
