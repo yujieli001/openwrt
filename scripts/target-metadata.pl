@@ -179,7 +179,7 @@ EOF
 	print <<EOF;
 choice
 	prompt "Target System"
-	default TARGET_ath79
+	default TARGET_x86
 	reset if !DEVEL
 	
 EOF
@@ -196,6 +196,7 @@ choice
 	prompt "Subtarget" if HAS_SUBTARGETS
 EOF
 	foreach my $target (@target) {
+		$target->{def_subtarget} = "64" if $target->{conf} eq "x86";
 		next unless $target->{def_subtarget};
 		print <<EOF;
 	default TARGET_$target->{conf}_$target->{def_subtarget} if TARGET_$target->{conf}
