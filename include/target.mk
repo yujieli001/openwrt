@@ -70,13 +70,14 @@ DEFAULT_PACKAGES.router:=\
 	luci-proto-ipv6 \
 	default-settings \
 	ddns-scripts_aliyun \
+	luci-app-ddns \
 	luci-app-wol \
 	luci-app-wrtbwmon \
+  luci-app-nlbwmon \
 	luci-app-udpxy \
 	luci-app-upnp \
 	luci-app-minidlna \
 	luci-app-openvpn \
-	luci-app-ddns \
 	luci-app-qbittorrent
 
 ifneq ($(DUMP),)
