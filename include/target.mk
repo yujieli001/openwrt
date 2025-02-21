@@ -60,7 +60,24 @@ DEFAULT_PACKAGES.router:=\
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
-	ppp-mod-pppoe
+	ppp-mod-pppoe \
+	curl \
+	fdisk \
+	bind-host \
+	block-mount \
+	openvpn-openssl \
+	luci \
+	luci-proto-ipv6 \
+	default-settings \
+	ddns-scripts_aliyun \
+	luci-app-wol \
+	luci-app-wrtbwmon \
+	luci-app-udpxy \
+	luci-app-upnp \
+	luci-app-minidlna \
+	luci-app-openvpn \
+  luci-app-ddns \
+  luci-app-qbittorrent
 
 ifneq ($(DUMP),)
   all: dumpinfo
