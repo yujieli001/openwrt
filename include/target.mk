@@ -76,8 +76,8 @@ DEFAULT_PACKAGES.router:=\
 	luci-app-upnp \
 	luci-app-minidlna \
 	luci-app-openvpn \
-  luci-app-ddns \
-  luci-app-qbittorrent
+	luci-app-ddns \
+	luci-app-qbittorrent
 
 ifneq ($(DUMP),)
   all: dumpinfo
