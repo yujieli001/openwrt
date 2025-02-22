@@ -2,4 +2,7 @@ src-git packages https://gitee.com/wwwos/packages.git
 src-git luci https://gitee.com/wwwos/luci.git
 src-git routing https://gitee.com/wwwos/routing.git
 src-git telephony https://gitee.com/wwwos/telephony.git
-src-git helloworld https://github.com/fw876/helloworld.git
+#src-git nas https://github.com/linkease/nas-packages.git
+src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main
+src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main
+#src-git helloworld https://github.com/fw876/helloworld.git
