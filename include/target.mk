@@ -69,6 +69,7 @@ DEFAULT_PACKAGES.router:=\
 	luci \
 	luci-proto-ipv6 \
 	default-settings \
+  luci-proto-wireguard \
 	ddns-scripts_aliyun \
 	luci-app-ddns \
 	luci-app-wol \
