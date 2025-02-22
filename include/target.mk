@@ -78,6 +78,7 @@ DEFAULT_PACKAGES.router:=\
 	luci-app-upnp \
 	luci-app-minidlna \
 	luci-app-openvpn \
+  luci-app-samba4 \
 	luci-app-qbittorrent
 
 ifneq ($(DUMP),)
