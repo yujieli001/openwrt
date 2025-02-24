@@ -71,6 +71,7 @@ sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-minidlna.json
 
 sed -i 's#downloads.openwrt.org#mirrors.aliyun.com\/openwrt#g' /etc/opkg/distfeeds.conf
 sed -i '/openwrt_helloworld/d' /etc/opkg/distfeeds.conf
+sed -i '/passwall/d' /etc/opkg/distfeeds.conf
 sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 
