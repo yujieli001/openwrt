@@ -69,17 +69,19 @@ DEFAULT_PACKAGES.router:=\
 	luci \
 	luci-proto-ipv6 \
 	default-settings \
-  luci-proto-wireguard \
+	luci-proto-wireguard \
 	ddns-scripts_aliyun \
-  luci-app-ddns \
+	dockerd \
+	luci-app-dockerman \
+	luci-app-ddns \
 	luci-app-wol \
 	luci-app-wrtbwmon \
-  luci-app-nlbwmon \
+	luci-app-nlbwmon \
 	luci-app-udpxy \
 	luci-app-upnp \
 	luci-app-minidlna \
 	luci-app-openvpn \
-  luci-app-samba4 \
+	luci-app-samba4 \
 	luci-app-qbittorrent
 
 ifneq ($(DUMP),)
