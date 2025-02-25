@@ -71,7 +71,9 @@ DEFAULT_PACKAGES.router:=\
 	default-settings \
   luci-proto-wireguard \
 	ddns-scripts_aliyun \
-	luci-app-ddns \
+  dockerd \
+  luci-app-dockerman \
+  luci-app-ddns \
 	luci-app-wol \
 	luci-app-wrtbwmon \
   luci-app-nlbwmon \
