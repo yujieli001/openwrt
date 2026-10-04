@@ -50,12 +50,34 @@ DEFAULT_PACKAGES.nas:=\
 # @brief Default packages for @DEVICE_TYPE router.
 ##
 DEFAULT_PACKAGES.router:=\
+	block-mount \
+	bind-host \
+	curl \
+	ddns-scripts_aliyun \
+	default-settings \
 	dnsmasq \
+	dockerd \
+	fdisk \
 	firewall4 \
-	nftables \
 	kmod-nft-offload \
+	luci \
+	luci-app-dockerman \
+	luci-app-ddns \
+	luci-app-minidlna \
+	luci-app-nlbwmon \
+	luci-app-openvpn \
+	luci-app-qbittorrent \
+	luci-app-samba4 \
+	luci-app-udpxy \
+	luci-app-upnp \
+	luci-app-wol \
+	luci-app-wrtbwmon \
+	luci-proto-ipv6 \
+	luci-proto-wireguard \
+	nftables \
 	odhcp6c \
 	odhcpd-ipv6only \
+	openvpn-openssl \
 	ppp \
 	ppp-mod-pppoe
 
