@@ -50,14 +50,71 @@ DEFAULT_PACKAGES.nas:=\
 # @brief Default packages for @DEVICE_TYPE router.
 ##
 DEFAULT_PACKAGES.router:=\
+	block-mount \
+	bind-host \
+	curl \
+	ddns-scripts_aliyun \
+	default-settings \
 	dnsmasq \
+	ddns-scripts \
+	ddns-scripts_luci \
+	dropbear \
+	fdisk \
 	firewall4 \
 	nftables \
 	kmod-nft-offload \
+	luci \
+	luci-app-ddns \
+	luci-app-nlbwmon \
+	luci-app-openvpn \
+	luci-app-qbittorrent \
+	luci-app-samba4 \
+	luci-app-upnp \
+	luci-app-udpxy \
+	luci-app-wol \
+	luci-app-wrtbwmon \
+	luci-base \
+	luci-compat \
+	luci-i18n-base-zh-cn \
+	luci-i18n-ddns-zh-cn \
+	luci-i18n-luadsp-zh-cn \
+	luci-i18n-nlbwmon-zh-cn \
+	luci-i18n-opkg-zh-cn \
+	luci-i18n-openvpn-zh-cn \
+	luci-i18n-qbittorrent-zh-cn \
+	luci-i18n-samba4-zh-cn \
+	luci-i18n-upnpd-zh-cn \
+	luci-i18n-udpxy-zh-cn \
+	luci-i18n-wol-zh-cn \
+	luci-i18n-wrtbwmon-zh-cn \
+	luci-proto-ipv6 \
+	luci-proto-ppp \
+	luci-proto-qmi \
+	luci-proto-relay \
+	luci-proto-wireguard \
+	luci-theme-argon \
+	nlbwmon \
+	openvpn-openssl \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
-	ppp-mod-pppoe
+	ppp-mod-pppoe \
+	ubus \
+	uci \
+	luci-app-advanced \
+	luci-app-fileassistant \
+	luci-app-mini-dlna \
+	luci-app-zerotier \
+	luci-i18n-advanced-zh-cn \
+	luci-i18n-fileassistant-zh-cn \
+	luci-i18n-zerotier-zh-cn \
+	wireguard-tools \
+	kmod-wireguard \
+	hostapd \
+	wget-ssl \
+	kmod-usb-net-cdc-ether \
+	kmod-usb-net-rndis \
+	kmod-macvlan
 
 ifneq ($(DUMP),)
   all: dumpinfo
