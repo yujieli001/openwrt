@@ -3,4 +3,4 @@ src-git luci https://github.com/yujieli001/luci.git
 src-git routing https://github.com/yujieli001/routing.git
 src-git telephony https://github.com/yujieli001/telephony.git
 src-git video https://github.com/yujieli001/video.git
-src-git helloworld https://github.com/fw876/helloworld.git
+src-git helloworld https://github.com/yujieli001/helloworld.git
