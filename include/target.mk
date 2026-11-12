@@ -34,6 +34,26 @@ DEFAULT_PACKAGES:=\
 	urandom-seed \
 	urngd
 
+# 本地默认增加的软件包。单独成块、不动上面上游那份核心列表，方便日后 diff 和回退。
+DEFAULT_PACKAGES += \
+	curl \
+	fdisk \
+	bind-host \
+	block-mount \
+	openvpn-openssl \
+	luci \
+	luci-proto-ipv6 \
+	default-settings \
+	luci-proto-wireguard \
+	luci-app-ddns \
+	luci-app-wol \
+	luci-app-nlbwmon \
+	luci-app-udpxy \
+	luci-app-upnp \
+	luci-app-minidlna \
+	luci-app-openvpn \
+	luci-app-samba4
+
 ##@
 # @brief Default packages for @DEVICE_TYPE basic.
 ##
