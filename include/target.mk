@@ -46,6 +46,7 @@ DEFAULT_PACKAGES += \
 	default-settings \
 	luci-proto-wireguard \
 	luci-app-ddns \
+	ddns-scripts-aliyun \
 	luci-app-wol \
 	luci-app-nlbwmon \
 	luci-app-udpxy \
